@@ -24,7 +24,7 @@ const ContextMenuSub = ContextMenuPrimitive.Sub;
 const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup;
 
 function ContextMenuSubTrigger({
-  className,
+  _className,
   inset,
   children,
   iconClassName,
@@ -34,6 +34,7 @@ function ContextMenuSubTrigger({
     children?: React.ReactNode;
     iconClassName?: string;
     inset?: boolean;
+    _className?: string;
   }) {
   const { open } = ContextMenuPrimitive.useSubContext();
   const icon = Platform.OS === "web" ? ChevronRight : open ? ChevronUp : ChevronDown;

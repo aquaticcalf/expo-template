@@ -30,7 +30,7 @@ const DropdownMenuSub = DropdownMenuPrimitive.Sub;
 const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 
 function DropdownMenuSubTrigger({
-  className,
+  _className,
   inset,
   children,
   iconClassName,
@@ -40,6 +40,7 @@ function DropdownMenuSubTrigger({
     children?: React.ReactNode;
     iconClassName?: string;
     inset?: boolean;
+    _className?: string;
   }) {
   const { open } = DropdownMenuPrimitive.useSubContext();
   const icon = Platform.OS === "web" ? ChevronRight : open ? ChevronUp : ChevronDown;

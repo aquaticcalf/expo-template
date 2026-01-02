@@ -98,7 +98,7 @@ function MenubarTrigger({
 }
 
 function MenubarSubTrigger({
-  className,
+  _className,
   inset,
   children,
   iconClassName,
@@ -108,6 +108,7 @@ function MenubarSubTrigger({
     children?: React.ReactNode;
     iconClassName?: string;
     inset?: boolean;
+    _className?: string;
   }) {
   const { open } = MenubarPrimitive.useSubContext();
   const icon = Platform.OS === "web" ? ChevronRight : open ? ChevronUp : ChevronDown;
@@ -158,8 +159,8 @@ function MenubarSubContent({
 
 function MenubarContent({
   className,
-  overlayClassName,
-  overlayStyle,
+  _overlayClassName,
+  _overlayStyle,
   portalHost,
   align = "start",
   alignOffset = -4,
@@ -167,8 +168,8 @@ function MenubarContent({
   ...props
 }: MenubarPrimitive.ContentProps &
   React.RefAttributes<MenubarPrimitive.ContentRef> & {
-    overlayStyle?: StyleProp<ViewStyle>;
-    overlayClassName?: string;
+    _overlayStyle?: StyleProp<ViewStyle>;
+    _overlayClassName?: string;
     portalHost?: string;
   }) {
   return (

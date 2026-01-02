@@ -149,9 +149,10 @@ function SelectLabel({
 
 function SelectItem({
   className,
-  children,
+  _children,
   ...props
-}: SelectPrimitive.ItemProps & React.RefAttributes<SelectPrimitive.ItemRef>) {
+}: SelectPrimitive.ItemProps &
+  React.RefAttributes<SelectPrimitive.ItemRef> & { _children?: React.ReactNode }) {
   return (
     <SelectPrimitive.Item
       className={cn(
